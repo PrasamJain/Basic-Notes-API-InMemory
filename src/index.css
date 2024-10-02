@@ -1,13 +1,291 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Serif Display', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #ffffff;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+nav .action button {
+  background-color: #ffffff;
+  color: #0004ec;
+  border: 2px solid #0004ec;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.headline {
+  text-align: center;
+  margin-top: 1em;
+}
+.headline span {
+  color: #0004ec;
+}
+
+.addNote {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 1em 2em;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  background: linear-gradient(#0004ec, #000000);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.note-form textarea, 
+.note-form input,
+.note-form button {
+  min-width: 300px;
+  padding: 1em;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffffff;
+  resize: none;
+  outline: 2px solid #a3d2f9;
+  letter-spacing: 1px;
+}
+
+.note-form button {
+  background: linear-gradient(#0004ec, #0004ec);
+  outline: none;
+  color: #fff;
+  font-size: 1.4em;
+  padding: 0.5em 1em;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+  margin: 2em 0;
+  margin-bottom: 100px;
+}
+
+.noteCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #dae9ff;
+  padding: 0.5em 1em;
+  width: 300px;
+  min-height: 135px;
+  margin: 1em;
+}
+
+.noteCard .title,
+.note-details .title {
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.noteCard .details,
+.note-details .details {
+  color: #565656;
+}
+
+.container {
+  padding: 1em;
+}
+
+.note-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 5em;
+  padding: 1em;
+  max-width: 700px;
+}
+
+.note-details .action {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+
+
+
+
+/* aboutus.css */
+.about-us {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-member {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: rgb(13, 0, 0);
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .headline {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.4em;
+  }
+  .headline span {
+    color: #0004ec;
+    font-size: 1.4em;
+  }
+
+}
+
+
+
+/* header.css */
+header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo span {
+  color: #0004ec;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background-color: rgb(18, 0, 216);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(76, 104, 214);
+}
+
+.actions .btn-genpact,
+.actions .btn-about,
+.actions .btn-contact {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .actions {
+      margin-top: 10px;
+  }
+
+  .logo h2 {
+    font-size: 1.6em; /* Reduce font size */
+    text-align: center; /* Center the text */
+    word-wrap: break-word; /* Ensure the text wraps if necessary */
+    margin-bottom: 10px;
+}
+
+}
+
